@@ -17,7 +17,6 @@ class _HomeScreenState extends State<HomeScreen> {
   final List promitions = [
     "assets/Promtion1.jpg",
     "assets/Promotion2.jpg",
-    "assets/Promtion3.jpg",
   ];
 
   int _currentIndex = 0;
@@ -318,29 +317,29 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-
-          SizedBox(
-            height: MediaQuery.of(context).size.height*0.5,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              shrinkWrap: true,
-              itemCount:promitions.length, 
-              itemBuilder:(context, index) {
-                return Container(
-                  width: MediaQuery.of(context).size.width*0.6,
-                  margin: EdgeInsets.only(left: 15),
-                  padding: EdgeInsets.symmetric(vertical: 5),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Image.asset(promitions[index],
-                  fit: BoxFit.cover,),
-                );
-              },
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.5,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                shrinkWrap: true,
+                itemCount: promitions.length,
+                itemBuilder: (context, index) {
+                  return Container(
+                    width: MediaQuery.of(context).size.width * 0.6,
+                    margin: EdgeInsets.only(left: 15),
+                    padding: EdgeInsets.symmetric(vertical: 5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Image.asset(
+                      promitions[index],
+                      fit: BoxFit.cover,
+                    ),
+                  );
+                },
+              ),
             ),
-          ),
-
-           SizedBox(height: 20),
+            SizedBox(height: 20),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
               child: Row(
@@ -366,7 +365,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             ProductWidgets(),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
           ],
         ),
       ),

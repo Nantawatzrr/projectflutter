@@ -36,7 +36,11 @@ class ProductWidgets extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => ProductScreen(), ));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProductScreen(),
+                            ));
                       },
                       child: Container(
                         alignment: Alignment.center,
